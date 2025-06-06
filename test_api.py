@@ -279,7 +279,7 @@ class APITester:
 
             def send_request(priority, ids_start):
                 payload = {
-                    "ids": list(range(ids_start, ids_start + 3)),
+                    "ids": list(range(ids_start + 1, ids_start + 4)),
                     "priority": priority
                 }
                 return requests.post(f"{self.base_url}/ingest", json=payload)
